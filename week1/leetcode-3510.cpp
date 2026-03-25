@@ -17,7 +17,7 @@ public:
         vector<bool> removed(n, false);
 
         // min-heap，存 {pair_sum, left_index}
-        // 代表目前有一組候選 pair 是 (left_index, next[left_index])
+        // 代表目前有一組候選 pair 是 {pair_sum, left_index}
         priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> pq;
 
         // sorted = 目前有幾條相鄰邊滿足 non-decreasing
