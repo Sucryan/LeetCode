@@ -1,4 +1,9 @@
 # https://leetcode.com/problems/minimum-replacements-to-sort-the-array/solutions/3978548/easy-to-understandfull-explanationdone-i-mtta
+# https://chatgpt.com/share/69f9c9c0-0598-83a8-94a4-4143a99d795c
+# 這題你可以把它想成：
+    # 右邊的人已經排好隊了，左邊每個巨人都要被切成小人，切完不能比右邊第一個人高。切越少越好，所以每次剛好切到「最大塊不超標」就好。
+# 這題的貪心精髓就是：
+    # 從右往左，每次用最少切割次數，把目前數字壓到右邊能接受的高度。
 class Solution:
     def minimumReplacement(self, nums: List[int]) -> int:
         n = len(nums)
